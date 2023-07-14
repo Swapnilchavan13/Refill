@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { loginUser } from '../actions/authActions';
+import { registerUser } from '../actions/authActions';
 
-export const Login = () => {
-  const [credentials, setCredentials] = useState({
+export const Register = () => {
+  const [userInfo, setUserInfo] = useState({
+    name: '',
     email: '',
     password: '',
   });
@@ -11,25 +12,33 @@ export const Login = () => {
   const dispatch = useDispatch();
 
   const handleInputChange = (e) => {
-    setCredentials({
-      ...credentials,
+    setUserInfo({
+      ...userInfo,
       [e.target.name]: e.target.value,
     });
   };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    dispatch(loginUser(credentials));
+    dispatch(registerUser(userInfo));
   };
 
   return (
     <div>
-      <h2>Login</h2>
+      <h2>Register</h2>
       <form onSubmit={handleFormSubmit}>
+        <input
+          type="text"
+          name="name"
+          value={userInfo.name}
+          onChange={handleInputChange}
+          placeholder="Name"
+          required
+        />
         <input
           type="email"
           name="email"
-          value={credentials.email}
+          value={userInfo.email}
           onChange={handleInputChange}
           placeholder="Email"
           required
@@ -37,12 +46,12 @@ export const Login = () => {
         <input
           type="password"
           name="password"
-          value={credentials.password}
+          value={userInfo.password}
           onChange={handleInputChange}
           placeholder="Password"
           required
         />
-        <button type="submit">Login</button>
+        <button type="submit">Register</button>
       </form>
     </div>
   );
