@@ -1,0 +1,17 @@
+#navbar{
+display: flex;
+text-align: center;
+justify-content: space-between;
+padding: 20px;
+color: aliceblue;
+background-image: url('https://media.tenor.com/aR-pX0-tkw8AAAAC/tech.gif');
+}
+#navbardiv{
+display: flex;
+text-align: center;
+justify-content: space-evenly;
+gap: 300px;
+padding: 10px;
+
+}
+
