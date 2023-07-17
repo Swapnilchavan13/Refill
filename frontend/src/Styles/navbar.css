@@ -18,3 +18,14 @@ h3{
     color: aliceblue;
 }
 
+h3:hover{
+    color: yellow;
+    font-size: larger;
+}
+
+
+@media (max-width: 768px) {
+    #navbardiv {
+display: none;
+    }    
+}

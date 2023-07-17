@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../Styles/navbar.css'
+import HamburgerMenu from './Hamburger'
 
 export const Navbar = () => {
   return (
@@ -8,6 +9,7 @@ export const Navbar = () => {
         <div>
             <h1>ReFill</h1>
         </div>
+        <HamburgerMenu />
         <div id='navbardiv'>
           <Link to="/buy">
             <h3>Buy Fuel</h3>
