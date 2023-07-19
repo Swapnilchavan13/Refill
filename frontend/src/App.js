@@ -6,16 +6,16 @@ import { Login } from './Components/Login';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Register } from './Components/Register';
 import store from './store.js';
-import AddressSaver from './Components/Address';
-import CarComponent from './Components/Car';
+import Spinner from './Components/Sun';
+import Moon from './Components/Moon';
 
 function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
         <Navbar />
-        <CarComponent />
-        <AddressSaver/>
+        <Moon />
+        <Spinner />
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/buy" element={<Buy />} />

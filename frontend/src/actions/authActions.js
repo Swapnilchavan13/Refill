@@ -35,15 +35,13 @@ alert("wrong cred")
 // Async action for user registration
 export const registerUser = (userInfo) => {
   return (dispatch) => {
-    // Make API request to register user
     axios.post('https://reqres.in/api/register', userInfo)
       .then((response) => {
-        // Assuming the response contains the registered user data
         const user = response.data;
         dispatch(registerSuccess(user));
       })
       .catch((error) => {
-        // Handle registration error
+        console.log("Error")
       });
   };
 };

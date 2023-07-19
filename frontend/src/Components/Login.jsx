@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { loginUser } from '../actions/authActions';
+import '../Styles/login.css';
 
 export const Login = () => {
   const [credentials, setCredentials] = useState({
@@ -23,10 +24,11 @@ export const Login = () => {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      <form onSubmit={handleFormSubmit}>
+    <div className="login-container">
+      <h2 className="login-title">Login</h2>
+      <form className="login-form" onSubmit={handleFormSubmit}>
         <input
+          className="login-input"
           type="email"
           name="email"
           value={credentials.email}
@@ -35,6 +37,7 @@ export const Login = () => {
           required
         />
         <input
+          className="login-input"
           type="password"
           name="password"
           value={credentials.password}
@@ -42,9 +45,10 @@ export const Login = () => {
           placeholder="Password"
           required
         />
-        <button type="submit">Login</button>
+        <button className="login-button" type="submit">
+          Login
+        </button>
       </form>
     </div>
   );
 };
-
