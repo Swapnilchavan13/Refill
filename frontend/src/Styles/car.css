@@ -1,0 +1,61 @@
+.car-container {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+  
+  .car-container:hover .car {
+    transform: rotateY(180deg);
+  }
+  
+  .car {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+  }
+  
+  .car-front,
+  .car-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+  
+  .car-front {
+    transform: translateZ(100px);
+  }
+  
+  .car-back {
+    transform: translateZ(-100px) rotateY(180deg);
+  }
+  
+  .car-front-image {
+    background-image: url(https://imgd.aeplcdn.com/370x208/n/cw/ec/130591/fronx-exterior-right-front-three-quarter-4.jpeg?isig=0&q=75);
+  }
+  
+  .car-back-image {
+    background-image: url(https://img.freepik.com/premium-photo/blue-car-with-red-license-plate-that-says-ford-it_1340-37122.jpg?w=360);
+  }
+  
+  .car-shadow {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+    pointer-events: none;
+  }
+  
+  .car-container:hover .car-shadow {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
