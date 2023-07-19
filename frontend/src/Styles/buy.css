@@ -1,61 +1,49 @@
-button {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    background: #183153;
-    font-family: "Montserrat", sans-serif;
-    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    border: none;
-   }
-   
-   button:after {
-    content: " ";
-    width: 0%;
-    height: 100%;
-    background: green;
-    position: absolute;
-    transition: all 0.4s ease-in-out;
-    right: 0;
-   }
-   
-   button:hover::after {
-    right: auto;
-    left: 0;
-    width: 100%;
-   }
-   
-   button span {
+.buy-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .buy-title {
     text-align: center;
-    text-decoration: none;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .buy-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .buy-field {
+    margin-bottom: 10px;
+  }
+  
+  .buy-label {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .buy-select,
+  .buy-input {
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .buy-select {
     width: 100%;
-    padding: 18px 25px;
-    color: #fff;
-    font-size: 1.125em;
-    font-weight: 700;
-    letter-spacing: 0.3em;
-    z-index: 20;
-    transition: all 0.3s ease-in-out;
-   }
-   
-   button:hover span {
-    color: yellow;
-    animation: scaleUp 0.3s ease-in-out;
-   }
-   
-   @keyframes scaleUp {
-    0% {
-     transform: scale(1);
-    }
-   
-    50% {
-     transform: scale(0.95);
-    }
-   
-    100% {
-     transform: scale(1);
-    }
-   }
-   
+  }
+  
+  .buy-input {
+    width: 100%;
+    background-color: #f8f8f8;
+    cursor: not-allowed;
+  }
+  
