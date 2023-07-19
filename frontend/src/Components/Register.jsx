@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { registerUser } from '../actions/authActions';
+import '../Styles/register.css';
 
 export const Register = () => {
   const [userInfo, setUserInfo] = useState({
@@ -24,10 +25,11 @@ export const Register = () => {
   };
 
   return (
-    <div>
-      <h2>Register</h2>
-      <form onSubmit={handleFormSubmit}>
+    <div className="register-container">
+      <h2 className="register-title">Register</h2>
+      <form className="register-form" onSubmit={handleFormSubmit}>
         <input
+          className="register-input"
           type="text"
           name="name"
           value={userInfo.name}
@@ -36,6 +38,7 @@ export const Register = () => {
           required
         />
         <input
+          className="register-input"
           type="email"
           name="email"
           value={userInfo.email}
@@ -44,6 +47,7 @@ export const Register = () => {
           required
         />
         <input
+          className="register-input"
           type="password"
           name="password"
           value={userInfo.password}
@@ -51,9 +55,10 @@ export const Register = () => {
           placeholder="Password"
           required
         />
-        <button type="submit">Register</button>
+        <button className="register-button" type="submit">
+          Register
+        </button>
       </form>
     </div>
   );
 };
-
