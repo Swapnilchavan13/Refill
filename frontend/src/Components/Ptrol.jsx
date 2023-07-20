@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const PetrolBuyer = () => {
   const [liters, setLiters] = useState(0);
@@ -22,7 +23,9 @@ const PetrolBuyer = () => {
         value={liters}
         onChange={(e) => setLiters(parseInt(e.target.value))}
       />
-      <button onClick={handleBuyPetrol}>Buy</button>
+      <Link to="/payment">
+        <button onClick={handleBuyPetrol}>Buy</button>
+      </Link>
     </div>
   );
 };

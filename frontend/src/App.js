@@ -6,6 +6,7 @@ import { Login } from './Components/Login';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Register } from './Components/Register';
 import store from './store.js';
+import { PaymentPage } from './Components/Payment';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/buy" element={<Buy />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/payment" element={<PaymentPage />} />
         </Routes>
       </BrowserRouter>
     </Provider>
