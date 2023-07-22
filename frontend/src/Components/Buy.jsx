@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../Styles/buy.css'; // Import CSS file
+import {Link} from 'react-router-dom';
 
 export const Buy = () => {
   const [fuelType, setFuelType] = useState('petrol');
@@ -75,9 +76,12 @@ export const Buy = () => {
             readOnly
           />
         </div>
+        <Link to='/payment'>
+          {/* <button>hello</button> */}
         <button className="buy-button" onClick={handleBuyClick}>
           Buy
         </button>
+        </Link>
       </div>
     </div>
   );
