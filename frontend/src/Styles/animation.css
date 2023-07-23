@@ -1,0 +1,28 @@
+.animation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: #007bff;
+    cursor: pointer;
+    transition: transform 1s ease;
+  }
+  
+  .animate {
+    animation: pulse 1s infinite alternate;
+  }
+  
+  @keyframes pulse {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.2);
+    }
+  }
+  
