@@ -13,19 +13,11 @@ justify-content: space-evenly;
 gap: 300px;
 padding: 10px;
 }
-h3{
-    text-decoration: none;
-    color: aliceblue;
+#navbardiv h3{
+color: white;
 }
 
 h3:hover{
     color: yellow;
-    font-size: larger;
-}
-
-
-@media (max-width: 768px) {
-    #navbardiv {
-display: none;
-    }    
+    /* font-size: larger; */
 }

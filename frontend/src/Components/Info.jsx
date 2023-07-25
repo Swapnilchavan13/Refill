@@ -1,7 +1,6 @@
 // AboutUs.js
 import React from 'react';
-import 'animate.css'; // Import the animate.css library\
-import '../Styles/info.css'
+import '../Styles/info.css'; // Import the custom CSS file
 
 const AboutUs = () => {
   return (

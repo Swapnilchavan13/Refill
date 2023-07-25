@@ -1,6 +1,7 @@
 // PaytmScannerGenerator.js
 import React from 'react';
 import QRCode from 'qrcode.react';
+import '../Styles/payment.css'
 
 export const PaymentPage = () => {
   // Replace these variables with your actual Paytm payment details
@@ -25,15 +26,28 @@ export const PaymentPage = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       {/* Display the Paytm QR Code */}
-      <QRCode value={generatePaytmURL()} size={200} />
+      <div className="qr-code">
+        <QRCode value={generatePaytmURL()} size={200} />
+      </div>
 
       {/* Additional UI elements */}
-      <h3>Scan the QR Code to make the payment via Paytm</h3>
-      <p>Amount: {amount} INR</p>
-      <p>Order ID: {orderId}</p>
+      <h2>Scan the QR Code to make the payment via Paytm</h2>
+      <div className="payment-info">
+        <p>Amount: {amount} INR</p>
+        <p>Order ID: {orderId}</p>
+      </div>
+      <button>Proceed to Pay</button>
     </div>
   );
 };
+
+
+
+
+
+
+
+
 

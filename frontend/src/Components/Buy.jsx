@@ -76,7 +76,10 @@ export const Buy = () => {
             readOnly
           />
         </div>
-        <Link to='/payment'>
+        <Link to={{
+        pathname: '/payment',
+        state: { amount: calculateAmount() }
+      }}>
           {/* <button>hello</button> */}
         <button className="buy-button" onClick={handleBuyClick}>
           Buy

@@ -1,0 +1,53 @@
+/* PaytmScannerGenerator.css */
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .qr-code {
+    margin-bottom: 20px;
+  }
+  
+  .qr-code img {
+    border-radius: 8px;
+  }
+  
+  .payment-info {
+    margin-top: 20px;
+  }
+  
+  .payment-info p {
+    margin-bottom: 10px;
+  }
+  
+  .payment-info p:last-child {
+    margin-bottom: 0;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  
